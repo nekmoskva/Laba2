@@ -1,21 +1,27 @@
 <!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="utf-8">
+  <html>
+  <head> 
+  <meta charset="utf-8"> 
   </head>
   
   <body>
     <script>
-if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос,вы готовы ответить?'))
-{
-var age = prompt('Сколько вам лет?','Введите сюда ваш возраст');
-if (confirm('Вы уверены что вам '+age))
-{
-alert("Ваш возраст "+age)
-alert("Спасибо, что уделилили время")
-}
-age = prompt('Сколько вам лет?','Введите сюда ваш возраст');
-}
+	var x=false;
+	function age()
+	
+   
+	 {
+     var age = prompt('Cколько вам лет?','Введите сюда ваш возраст');	 
+     x = (confirm('Вы уверены что вам '+age))
+	 }
+	
+
+while (!x)
+
+{age();}
+
+alert("Спасибо, что уделилили время");
+
 </script>
  </body>
 </html>
