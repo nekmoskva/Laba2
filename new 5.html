@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+     <meta charset="utf-8">
+    </head>
+
+    <body>
+	  <h1>Резюме!</h1>
+<div class="row">
+<div class= "s14" >
+<div class="col s2">
+<div class="row">
+    <form class="col s12"> 
+      <div class="row">
+        <div class="input-field col s12"> 
+          <input id="name" type="text" class="validate">
+          <label for="name" class = "s13">> Имя</label>
+        </div>
+	  </div>
+	  <div class="row">
+		<div class="input-field col s12">
+          <input id="age" type="text" class="validate">
+          <label for="age" class = "s13">> Возраст</label>
+        </div>
+	  </div>
+	  <div class="row">
+		<div class="input-field col s12">
+          <input id="sex" type="text" class="validate">
+          <label for="sex" class = "s13">> Пол</label>
+        </div>
+	  </div>
+	  <div class= "row" >
+           <p><b>Коментарий:</b></p>
+            <textarea name="NAME" cols=30 rows=8></textarea>
+        </div>
+		<p> <input type="checkbox" id="education"> <label for="education">Высшее образование</label> </p>
+	  	<p> <input type="checkbox" id="mathematic"> <label for="mathematic">Знание математики</label> </p>
+	  	<p> <input type="checkbox" id="asu"> <label for="asu">Знание АСУ ТП</label> </p>
+	  	<p> <input type="checkbox" id="cutting"> <label for="cutting">Знание теории резания</label> </p>
+	  	<p> <input type="checkbox" id="programming"> <label for="programming">Знание программирования</label> </p>
+		<p> <input type="button" name="btn" value="Заполнить анкету" onclick="check()" </p>
+		<div id="div1">(если хотите узнать, подходите ли вы нам)</div>
+	</form>
+
+<script>
+	function check()
+	{
+	var x = document.getElementById("div1");
+	 
+		{
+		if ((document.getElementById("education").checked == true && document.getElementById("mathematic").checked == true && document.getElementById("asu").checked == true)||
+            (document.getElementById("education").checked == true && document.getElementById("mathematic").checked == true && document.getElementById("cutting").checked == true)||
+            (document.getElementById("education").checked == true && document.getElementById("mathematic").checked == true && document.getElementById("programming").checked == true)||
+            (document.getElementById("education").checked == true && document.getElementById("asu").checked == true && document.getElementById("cutting").checked == true)||
+            (document.getElementById("education").checked == true && document.getElementById("asu").checked == true && document.getElementById("programming").checked == true)||
+            (document.getElementById("education").checked == true && document.getElementById("cutting").checked == true && document.getElementById("programming").checked == true))	   
+			{
+       			var text= '<p>ВЫ НАМ ПОДОШЛИ!</p>'
+			x.innerHTML = text;
+			x.style.display = "block";
+			}
+		else 	{
+        		if (document.getElementById("education").checked == true) 
+			{
+				var text ='<p>ВЫ НАМ НЕ НУЖНЫ!</p>'
+			}
+			x.innerHTML = text;
+			x.style.display = "block";
+			}
+		}
+	}  
+    
+</script>
+	
+</div>
+</div>
+</div>
+<style>
+body {
+color: #005900;
+background: #FFFCA8;
+text-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px;
+text-align: center;
+
+            /*font-family:  Tahoma, serif;
+			
+            
+			text-shadow;
+            background:#d5ebff;
+            background-size: 300 px 300 px;*/
+        }
+		.s13 {
+            font-size: 16 px;
+			
+        }
+		.s14 
+        {
+            text-align: center;
+            margin: 10 px;
+            padding: 5 px;
+            border-radius: 13 px;
+            border-style: groove;
+            display:inline-flex;
+			background:#FFFBE6;
+        }
+		</style>
+		
+    </body>
+  </html>
